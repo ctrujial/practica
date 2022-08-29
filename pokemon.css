@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Josefin+Sans:ital,wght@1,700&family=Poppins:ital,wght@1,900&family=Silkscreen&display=swap');
+
+h1{
+    color: #D6D5A8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Silkscreen';
+}
+
+h2{
+    color: #D6D5A8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 45px;
+}
+
+body{
+    background-color: #1B2430;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.pokemones{
+    display: flex;
+    margin: 15px;
+    background-color: transparent;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor-pokemones{
+    display: flex;
+    margin: 21px;
+    margin-block-end: 31px;
+}
+
+img{
+    width: 130px;
+    height: 130px;
+}
+
+.pokemon{
+    background-color: #51557E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 167px;
+    height: 202px;
+    padding: 10px;
+    color: #D6D5A8;
+    margin: 13px;
+    border: 5px solid;
+    border-radius: 25px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+input{
+    display: none;
+}
+
+button{
+    width: 138px;
+    height: 51px;
+    padding: 4px;
+    border: 3px solid;
+    background-color: #51557E;
+    color: #D6D5A8;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    border-radius: 17px;
+}
+
+.botones-combate{
+    display: flex;
+}
+
+#contenedor-N2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boton-fuego, #boton-agua, #boton-tierra{
+    margin: 10px;
+
+}
+
+.nombre-pokemones{
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenedor-mascota-jugador{
+    margin-right: 15px;
+    color: #D6D5A8;
+}
+
+.contenedor-mascota-contrincante{
+    margin-left: 15px;
+    color: #D6D5A8;
+}

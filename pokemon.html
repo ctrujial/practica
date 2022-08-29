@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pokemon.css">
+</head>
+<body>
+    <section id="contenedor-N1">
+        <div class="pokemones">
+            <h1>Pokemon👾</h1>
+
+            <div id="contenedor-pokemones">
+                <input type="radio" name="mascotas" id="charizard">
+                <label class="pokemon" for="charizard">
+                    <p>Charizard</p>
+                    <img src="./img/charizard.jpg" alt="">
+                </label>
+
+                <input type="radio" name="mascotas" id="squirtle">
+                <label class="pokemon" for="squirtle">
+                    <p>Squirtle</p>
+                    <img src="./img/squirtle.jpg" alt="">
+                </label>
+
+                <input type="radio" name="mascotas" id="Cubone">
+                <label class="pokemon" for="Cubone">
+                    <p>Cubone</p>
+                    <img src="./img/cubone.jpg" alt="">
+                </label>
+            </div>
+            <button class="seleccionM" id="seleccion-mascota">Selecciona tu pokemon!</button>
+        </div>
+    </section>
+
+    <section id="contenedor-N2">
+        <h1>Pokemon👾</h1>
+        <h2>Combate</h2>
+
+        <div class="botones-combate">
+            <button id="boton-fuego">fuego</button>
+            <button id="boton-agua">agua</button>
+            <button id="boton-tierra">tierra</button>
+        </div>
+
+        <div class="nombre-pokemones">
+
+            <div class="contenedor-mascota-jugador">
+                <p id="nombre-mascota-jugador">No asignado</p>
+            </div>
+            
+            <div class="contenedor-mascota-contrincante">
+                <p id="nombre-mascota-contrincante"></p>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section>
+        <div>
+            <p id="ataques"></p>
+        </div>
+
+        <div>
+            <p id="ataques-contrincante"></p>
+        </div>
+    </section>
+    
+    <script src="./pokemon.js"></script>
+</body>
+</html>
+
