@@ -1,3 +1,8 @@
+let ataquesJugador
+let ataquesEnemigo
+
+let trienfos = 5, derrotas = 5
+
 let botonSeleccionarMascota = document.getElementById("seleccion-mascota")
 let charizard = document.getElementById("charizard")
 let squirtle = document.getElementById("squirtle")
@@ -13,7 +18,15 @@ let botonTierra = document.getElementById("boton-tierra")
 
 let aleatorio
 
-let pAtaques = document.getElementById("ataques")
+let pAtaques = document.getElementById("ataques-jugador")
+let ataquesContrincante = document.getElementById("ataques-contrincante")
+
+let resultadoGanador = document.getElementById("resultado-ganador")
+let resultadoAtaques = document.getElementById("resultado-ataques")
+resultadoAtaques.style.display = "none";
+
+let triunfo = document.getElementById("triunfos")
+let derrota = document.getElementById("derrotas")
 
 function inicio(){
     botonSeleccionarMascota.addEventListener("click", seleccionarMascotaJugador)
@@ -63,37 +76,64 @@ function seleccionarMascotaContrincante(){
     }
 }
 
-function botonDeFuego(){
-    pAtaques.innerHTML = "Ataque de fuego"
+function botonDeFuego(){seleccionDeBotonContrincante()
+    ataquesJugador = "Fuego"
     seleccionDeBotonContrincante()
 }
 
 function botonDeAgua(){
-    pAtaques.innerHTML = "Ataque de Agua"
+    ataquesJugador = "Agua"
     seleccionDeBotonContrincante()
 }
 
 function botonDeTierra(){
-    pAtaques.innerHTML = "Ataque de Tierra"
+    ataquesJugador = "Tierra"
     seleccionDeBotonContrincante()
 }
 
 function seleccionDeBotonContrincante(){
     aleatorio = numeroAleatorio(3,1)
 
-    let ataquesContrincante = document.getElementById("ataques-contrincante")
-
     if(aleatorio == 1){
-        ataquesContrincante.innerHTML = "Fuego"
+        ataquesEnemigo = "Fuego"
     }else if (aleatorio == 2){
-        ataquesContrincante.innerHTML = "Agua"
+        ataquesEnemigo = "Agua"
     }else{
-        ataquesContrincante.innerHTML = "Tierra"
+        ataquesEnemigo = "Tierra"
     }
+    combate()
 }
 
 function combate(){
+    resultadoAtaques.style.display = "flex"
+    if (ataquesJugador == ataquesEnemigo){
+        resultadoGanador.innerHTML = "Empate"
 
+    }else if (ataquesJugador == "Fuego" && ataquesEnemigo == "Tierra"){
+        resultadoGanador.innerHTML = "Triunfo"
+        trienfos = trienfos-1
+        triunfo.innerHTML = trienfos
+    }else if (ataquesJugador == "Agua" && ataquesEnemigo == "Fuego"){
+        resultadoGanador.innerHTML = "Triunfo"
+        trienfos = trienfos-1
+        triunfo.innerHTML = trienfos
+    }else if (ataquesJugador == "Tierra" && ataquesEnemigo == "Agua"){
+        resultadoGanador.innerHTML = "Triunfo"
+        trienfos = trienfos-1
+        triunfo.innerHTML = trienfos
+    }else{
+        derrota.innerHTML = derrotas
+        derrotas = derrotas-1
+    }
+}
+
+function ganador(){
+    if (trienfos == 0){
+        resultadoGanador.innerHTML = "Ganaste!! 😎"
+    }else if (derrotas == 0){
+        resultadoGanador.innerHTML = "Perdiste!! 😐"
+    }
+    
 }
 
 
