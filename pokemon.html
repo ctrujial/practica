@@ -39,10 +39,13 @@
         <h1>Pokemon👾</h1>
         <h2>Combate</h2>
 
-        <div class="botones-combate">
-            <button id="boton-fuego">fuego</button>
-            <button id="boton-agua">agua</button>
-            <button id="boton-tierra">tierra</button>
+        <div class="botones-combate" id="botones-combate-id">
+            <p>
+                <button id="boton-fuego">fuego🔥</button>
+                <button id="boton-agua">agua💧</button>
+                <button id="boton-tierra">tierra♒</button>
+            </p>
+            
         </div>
 
         <div class="nombre-pokemones">
@@ -58,24 +61,33 @@
         </div>
         
     </section>
+    
 
-    <section>
-        <div>
-            <p id="ataques-jugador"></p>
+    <section class="contenedor-N3" id="contenedor-N3-id">
+
+        <div>            
+            <span class="resultado-de-ganador" id="resultado-ganador">Suerte!</p>
         </div>
 
-        <div>
-            <p id="ataques-contrincante"></p>
+        <div class="triunfos-y-derrotas">
+            <p>Tu: <span id="r-triunfos">0</span></p>
+            <p>En: <span id="r-derrotas">0</span></p>
         </div>
 
-        <div class="resultado-de-ataques" id="resultado-ataques">
-            <div class="triunfo-derrota">
-                                     <p class="triunfo" id="triunfos">triunfos</p>
-                <p class="derrota" id="derrotas">derrotas</p>
+        <div class="ataques-de-j-e">
+            <div>
+                <p id="ataques-jugador"></p>
             </div>
-            
-            <p class="resultado-de-ganador" id="resultado-ganador"></p>
+    
+            <div>
+                <p id="ataques-contrincante"></p>
+            </div>
         </div>
+
+        <div>
+            <button class="boton-de-reiniciar" id="boton-reiniciar">Reiniciar</button>
+        </div>        
+
     </section>
     
     <script src="./pokemon.js"></script>
